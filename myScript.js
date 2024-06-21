@@ -1,5 +1,7 @@
 function myFunction() {
     document.getElementById("demo").innerHTML="Biruk is a bot at basketball"
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("changeColorBtn");
   const body = document.body;
