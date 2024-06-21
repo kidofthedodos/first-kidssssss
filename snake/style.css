@@ -1,0 +1,18 @@
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+const gridSize = 20;
+let snake = [{ x: 200, y: 200 }];
+let food = generateFood();
+let direction = { x: 0, y: 0 };
+let newDirection = { x: 0, y: 0 };
+let score = 0;
+
+function generateFood() {
+    return {
+        x: Math.floor(Math.random() * (canvas.width / gridSize)) * gridSize,
+        y: Math.floor(Math.random() * (canvas.height / gridSize)) * gridSize
+    };
+}
+
+document.addEventListener('keydown', changeDirection);
